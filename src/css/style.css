@@ -34,14 +34,20 @@ body {
 }
 
 #empty-list {
+    padding: 20px;
     background-color: #f8f8f8;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #empty-list .info-text {
     text-align: center;
     font-family: 'Lucida Sans', 
     'Lucida Sans Regular', 
-    'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    'Lucida Grande', 'Lucida Sans Unicode', 
+    Geneva, Verdana, sans-serif;
 }
 
 .add-player-container {
@@ -51,5 +57,4 @@ body {
 #add-player {
     margin: 30px;
     cursor: pointer;
-    vertical-align: bottom;
 }
