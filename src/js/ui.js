@@ -1,14 +1,12 @@
-class UI {
-  static get header() {
-    return `
-            <h1>   
-                Soccer Nova
-            </h1>
-        `;
-  }
+import Action from "./action";
 
-  static get soccerNovaContent() {
-    return `
+class UI {
+
+    static get elements() {
+
+        const appContainer = document.getElementById('soccer-nova');
+
+        const  initialContent =  `
             <div id="empty-list">
                 <p class="info-text">
                     Your Super Nova list is empty, <br/>
@@ -19,22 +17,63 @@ class UI {
                 </p>
             </div>
         `;
-  }
 
-  static elements() {
-    let addPlayerForm;
-    let appContainer;
-    let emptyListInfo;
+        const emptyListInfo = `
+            <p class="info-text">
+                Your Super Nova list is empty, <br/>
+                add players to have them display here!
+            </p>
+        `;
 
-    return {
-      addPlayerForm,
-      appContainer,
-      emptyListInfo,
-    };
-  }
+        const addPlayerForm = `
+            <form>
+                <table>
+                    <tr>
+                        <td>
+                            <img />
+                            <input type="file">
+                        </td>
+                        <td>
+                            <div>
+                                <input type="text" placeholder="First Name" />
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Last Name" />
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Club" />
+                            </div>
+                            <div>
+                                <input type="number" placeholder="Number of goal" />
+                            </div>
+                            <div>
+                                <input type="number" placeholder="Age" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        `;
 
-  static displayApp() {
-    // console.log('Displaying app ..');
+        return {
+            appContainer,
+            emptyListInfo,
+            initialContent,
+            addPlayerForm,
+        };
+    }
+
+  static runApp() {
+    const {
+        appContainer,
+        //emptyListInfo,
+        //initialContent,
+       // addPlayerForm
+    } = UI;
+
+    const {  } = Action;
+
+    appContainer.addEventListener("click", e => )
   }
 }
 

@@ -2,18 +2,23 @@ import '../css/style.css';
 import UI from './ui.js';
 
 const {
-  header, soccerNovaContent, displayApp,
+  elements, 
+  runApp,
 } = UI;
+
+const { 
+  initialContent 
+} = elements;
+
 const myAppContainer = document.getElementById('soccer-nova');
 myAppContainer.innerHTML = `
-    ${header}
-    ${soccerNovaContent}
+    ${initialContent}
 `;
 
 /*
 displayApp();
 
-if I do only displaay(), it will work but as storytellers
+if I do displaay(), it will work but as storytellers
 we make our code read well and look clean
 */
-document.addEventListener('DOMContentLoaded', displayApp);
+document.addEventListener('DOMContentLoaded', runApp);
