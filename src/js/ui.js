@@ -1,15 +1,14 @@
 class UI {
-    static get header() {
-        return `
-        <h1>   
-            Soccer Nova
-        </h1>
+  static get header() {
+    return `
+            <h1>   
+                Soccer Nova
+            </h1>
         `;
-    }
+  }
 
-    static get soccerNovaContent() {
-
-        return `
+  static get soccerNovaContent() {
+    return `
             <div id="empty-list">
                 <p class="info-text">
                     Your Super Nova list is empty, <br/>
@@ -20,12 +19,23 @@ class UI {
                 </p>
             </div>
         `;
-    }
+  }
 
-    static displayApp() {
-        console.log("Displaying app ..")
-    }
+  static elements() {
+    let addPlayerForm;
+    let appContainer;
+    let emptyListInfo;
 
+    return {
+      addPlayerForm,
+      appContainer,
+      emptyListInfo,
+    };
+  }
+
+  static displayApp() {
+    // console.log('Displaying app ..');
+  }
 }
 
 export default UI;
