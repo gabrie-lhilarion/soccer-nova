@@ -1,19 +1,9 @@
 import '../css/style.css';
-import UI from './ui.js';
-
-const {
-  elements, 
-  runApp,
-} = UI;
+import UI from './ui';
 
 const { 
-  initialContent 
-} = elements;
-
-const myAppContainer = document.getElementById('soccer-nova');
-myAppContainer.innerHTML = `
-    ${initialContent}
-`;
+  runApp,
+} = UI;
 
 /*
 displayApp();
