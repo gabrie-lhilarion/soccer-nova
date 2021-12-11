@@ -1,8 +1,6 @@
 class HtmlString {
-
-    static get domStrings() {
-
-        const  initialContent =  `
+  static get domStrings() {
+    const initialContent = `
             <div id="empty-list">
                 <p class="empty-list-info-text">
                     Your Super Nova list is empty, <br/>
@@ -14,14 +12,14 @@ class HtmlString {
             </div>
         `;
 
-        const emptyListInfo = `
+    const emptyListInfo = `
             <p class="empty-list-info-text">
                 Your Super Nova list is empty, <br/>
                 add players to have them display here!
             </p>
             `;
 
-        const addPlayerForm = `
+    const addPlayerForm = `
             <form id="add-player-form">
                 <div>
                     <span class="close-form"> &times</span>
@@ -55,13 +53,12 @@ class HtmlString {
             </form>
         `;
 
-        return {
-            initialContent,
-            emptyListInfo,
-            addPlayerForm,
-        }
-
-    }
+    return {
+      initialContent,
+      emptyListInfo,
+      addPlayerForm,
+    };
+  }
 }
 
 export default HtmlString;

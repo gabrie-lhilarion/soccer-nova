@@ -1,23 +1,31 @@
-import Action from "./action";
+import Action from './action.js';
 
-const { editPlayer, dom: { initialContent, appContainer } } = Action;
+const {
+
+  editPlayer,
+  dom: {
+    initialContent,
+    appContainer,
+  },
+
+} = Action;
 
 class UI {
-
-    static display() {       
-        appContainer.innerHTML = `
+  static display() {
+    appContainer
+      .innerHTML = `
             ${initialContent}
         `;
-    }    
+  }
 
-    static runApp() {
+  static runApp() {
+    UI.display();
 
-        UI.display();
-
-        appContainer.addEventListener("click", clickEvent => editPlayer(clickEvent));
-
-    }
-
+    appContainer.addEventListener(
+      'click',
+      (clickEvent) => editPlayer(clickEvent),
+    );
+  }
 }
 
 export default UI;
