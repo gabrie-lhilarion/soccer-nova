@@ -1,0 +1,63 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.vertical-centered {
+  padding-top: 40vh;
+}
+
+#soccer-nova {
+  width: 800px;
+  max-width: 90%;
+  height: 100vh;
+  margin: auto;
+}
+
+#wrapper h1 {
+  padding: 30px 0;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-family:
+    Impact,
+    Haettenschweiler,
+    'Arial Narrow Bold',
+    sans-serif;
+  word-spacing: 3.8px;
+  letter-spacing: 1.5px;
+  color: #444;
+}
+
+.add-player-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#empty-list {
+  padding: 20px;
+  background-color: #f8f8f8;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#empty-list .info-text {
+  text-align: center;
+  font-family:
+    'Lucida Sans',
+    'Lucida Sans Regular',
+    'Lucida Grande',
+    'Lucida Sans Unicode',
+    Geneva,
+    Verdana,
+    sans-serif;
+}
+
+#add-player {
+  margin: 30px;
+  cursor: pointer;
+}
