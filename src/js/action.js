@@ -10,7 +10,7 @@ const {
   replaceButton,
   displayImagePreview,
   formIsValid,
-  acceptThisPlayer,
+  addPlayerToList,
   resetForm,
   numberOfPlayers,
   playersContainer,
@@ -22,7 +22,7 @@ class Action {
 
     if (elementClicked.id === 'save-player') {
       if (formIsValid(form)) {
-        acceptThisPlayer();
+        addPlayerToList();
         resetForm();
       }
     }
@@ -30,7 +30,7 @@ class Action {
     if (elementClicked.id === 'add-player') {
       if (!form()) {
         elementClicked.parentElement
-          .insertAdjacentHTML('beforebegin', addPlayerForm);
+        .insertAdjacentHTML('beforebegin', addPlayerForm);
 
         replaceButton(elementClicked, 'save-player', 'SAVE PLAYER');
       }

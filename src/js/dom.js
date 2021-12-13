@@ -6,7 +6,8 @@ class Dom {
       emptyListInfo,
       initialContent,
       addPlayerForm,
-    } = HtmlString.domStrings;
+    } 
+    = HtmlString.domStrings;
 
     const appContainer = document.getElementById('soccer-nova');
 
@@ -20,16 +21,21 @@ class Dom {
 
     const form = () => document.querySelector('form');
 
+    const  removeEmptyListInfoText = () => {
+      if (document.querySelector('.empty-list-info-text')) {
+        document.querySelector('.empty-list-info-text').remove();
+      }
+    }
+
     const resetForm = () => {
       const formInputs = [...form().querySelectorAll('input')];
       formInputs.forEach((input) => { input.value = ''; });
       formInputs[0].previousElementSibling.src = '';
     };
 
-    const acceptThisPlayer = () => {
-      if (document.querySelector('.empty-list-info-text')) {
-        document.querySelector('.empty-list-info-text').remove();
-      }
+    const addPlayerToList = () => {
+
+      removeEmptyListInfoText();
 
       const newPlayerDiv = document.createElement('div');
       newPlayerDiv.classList.add('player');
@@ -40,21 +46,33 @@ class Dom {
       const playerDeleteButton = newPlayerDiv.querySelector('.close-form');
 
       if (numberOfPlayers() % 2 === 0) {
+
         playerDeleteButton.className = 'delete-right';
+
+        const moveImageToLeft = newPlayerDiv.querySelector('.form-inner-1');
+        moveImageToLeft.classList.add('player-inner-right');
+        moveImageToLeft.classList.remove('form-inner-1');
+
       } else {
+
         playerDeleteButton.className = 'delete-left';
 
-        const forReversing = newPlayerDiv.querySelector('.form-inner-1');
-        forReversing.classList.add('form-inner-2');
-        forReversing.classList.remove('form-inner-1');
+        const moveImageToRight = newPlayerDiv.querySelector('.form-inner-1');
+        moveImageToRight.classList.add('player-inner-left');
+        moveImageToRight.classList.remove('form-inner-1');
+
       }
 
       const filledForm = [...newPlayerDiv.querySelectorAll('input')];
       filledForm.forEach((input, index) => {
+
         if (input?.files) {
+
           const playerImage = input.previousElementSibling;
           playerImage.classList.add('player-image');
+
         } else {
+
           input.parentElement.classList.add('player-info-text');
           input.parentElement.innerHTML = `
                         ${input.getAttribute('placeholder')}:  
@@ -62,7 +80,9 @@ class Dom {
                             ${currentForm.querySelectorAll('input')[index].value.trim()} 
                         </strong>
                     `;
+                    
         }
+
       });
 
       currentForm.insertAdjacentElement('beforebegin', newPlayerDiv);
@@ -74,9 +94,9 @@ class Dom {
       return filledForm.every((input) => input.value.trim().length > 1);
     };
 
-    const replaceButton = (target, identifier, text) => {
-      target.id = identifier;
-      target.innerHTML = text;
+    const replaceButton = (targetButton, identifier, text) => {
+      targetButton.id = identifier;
+      targetButton.innerHTML = text;
     };
 
     const displayImagePreview = (fileInputChange) => {
@@ -98,7 +118,7 @@ class Dom {
       replaceButton,
       displayImagePreview,
       formIsValid,
-      acceptThisPlayer,
+      addPlayerToList,
       resetForm,
       numberOfPlayers,
       playersContainer,

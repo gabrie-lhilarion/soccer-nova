@@ -5,4 +5,4 @@ const {
   runApp,
 } = UI;
 
-document.addEventListener('DOMContentLoaded', runApp);
+runApp();

@@ -1,16 +1,16 @@
 import Action from './action.js';
 
 const {
-
-  editPlayer,
+  addDeletePlayer,
   dom: {
     initialContent,
     appContainer,
-  },
+},
 
 } = Action;
 
 class UI {
+
   static display() {
     appContainer
       .innerHTML = `
@@ -23,9 +23,10 @@ class UI {
 
     appContainer.addEventListener(
       'click',
-      (clickEvent) => editPlayer(clickEvent),
+      (clickEvent) => addDeletePlayer(clickEvent),
     );
   }
+
 }
 
 export default UI;
