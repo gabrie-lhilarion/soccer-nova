@@ -23,11 +23,11 @@ class Action {
 
     if (elementClicked.id === 'save-player') {
 
-      if ( formIsValid() ) {
-        addPlayerToList();
-        resetForm();
+      if ( formIsValid(getAddPlayerForm) ) {
+        addPlayerToList(getAddPlayerForm);
+        resetForm(getAddPlayerForm);
       } else {
-        heighLightErrors();
+        heighLightErrors(getAddPlayerForm);
       }
 
     }
@@ -55,7 +55,7 @@ class Action {
     }
 
     if (elementClicked.className === 'delete-right' || elementClicked.className === 'delete-left') {
-      
+
       elementClicked.parentElement.parentElement.remove();
 
       if (numberOfPlayers() === 0) {
