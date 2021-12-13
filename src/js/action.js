@@ -17,7 +17,7 @@ const {
 } = Dom.elements;
 
 class Action {
-  static editPlayer(clickEvent) {
+  static addDeletePlayer(clickEvent) {
     const elementClicked = clickEvent.target;
 
     if (elementClicked.id === 'save-player') {
