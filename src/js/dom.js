@@ -21,6 +21,18 @@ class Dom {
 
     const getAddPlayerForm = () => document.querySelector('form');
 
+    const moveImageToLeft = (element) => {
+      const divWithPlayerImage = element.querySelector('.form-inner-1');
+      divWithPlayerImage.classList.add('player-inner-left');
+      divWithPlayerImage.classList.remove('form-inner-1');
+    }
+
+    const moveImageToRight = (element) => {
+      const divWithPlayerImage = element.querySelector('.form-inner-1');
+      divWithPlayerImage.classList.add('player-inner-right');
+      divWithPlayerImage.classList.remove('form-inner-1');
+    }
+
     const  removeEmptyListInfoText = () => {
       if (document.querySelector('.empty-list-info-text')) {
         document.querySelector('.empty-list-info-text').remove();
@@ -49,17 +61,13 @@ class Dom {
 
         playerDeleteButton.className = 'delete-right';
 
-        const moveImageToLeft = newPlayerDiv.querySelector('.form-inner-1');
-        moveImageToLeft.classList.add('player-inner-right');
-        moveImageToLeft.classList.remove('form-inner-1');
+        moveImageToLeft(newPlayerDiv)
 
       } else {
 
         playerDeleteButton.className = 'delete-left';
 
-        const moveImageToRight = newPlayerDiv.querySelector('.form-inner-1');
-        moveImageToRight.classList.add('player-inner-left');
-        moveImageToRight.classList.remove('form-inner-1');
+        moveImageToRight(newPlayerDiv)
 
       }
 

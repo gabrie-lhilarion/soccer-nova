@@ -23,7 +23,7 @@ class Action {
 
     if (elementClicked.id === 'save-player') {
 
-      if (formIsValid()) {
+      if ( formIsValid() ) {
         addPlayerToList();
         resetForm();
       } else {
@@ -33,12 +33,10 @@ class Action {
     }
 
     if (elementClicked.id === 'add-player') {
-      if (!getAddPlayerForm()) {
-        elementClicked.parentElement
-        .insertAdjacentHTML('beforebegin', addPlayerForm);
+      elementClicked.parentElement
+      .insertAdjacentHTML('beforebegin', addPlayerForm);
 
-        replaceButton(elementClicked, 'save-player', 'SAVE PLAYER');
-      }
+      replaceButton(elementClicked, 'save-player', 'SAVE PLAYER');
     }
 
     if (elementClicked.type?.toLowerCase() === 'file') {
@@ -46,13 +44,18 @@ class Action {
     }
 
     if (elementClicked.className === 'close-form') {
+
       const currentForm = getAddPlayerForm();
+
       const saveButton = savePlayerButton();
+
       currentForm.remove();
+
       replaceButton(saveButton, 'add-player', '&plus; <br/> add player');
     }
 
     if (elementClicked.className === 'delete-right' || elementClicked.className === 'delete-left') {
+      
       elementClicked.parentElement.parentElement.remove();
 
       if (numberOfPlayers() === 0) {
