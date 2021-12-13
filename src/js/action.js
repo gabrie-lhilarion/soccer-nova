@@ -6,10 +6,11 @@ const {
   initialContent,
   addPlayerForm,
   savePlayerButton,
-  form,
+  getAddPlayerForm,
   replaceButton,
   displayImagePreview,
   formIsValid,
+  heighLightErrors,
   addPlayerToList,
   resetForm,
   numberOfPlayers,
@@ -21,14 +22,18 @@ class Action {
     const elementClicked = clickEvent.target;
 
     if (elementClicked.id === 'save-player') {
-      if (formIsValid(form)) {
+
+      if (formIsValid()) {
         addPlayerToList();
         resetForm();
+      } else {
+        heighLightErrors();
       }
+
     }
 
     if (elementClicked.id === 'add-player') {
-      if (!form()) {
+      if (!getAddPlayerForm()) {
         elementClicked.parentElement
         .insertAdjacentHTML('beforebegin', addPlayerForm);
 
@@ -41,7 +46,7 @@ class Action {
     }
 
     if (elementClicked.className === 'close-form') {
-      const currentForm = form();
+      const currentForm = getAddPlayerForm();
       const saveButton = savePlayerButton();
       currentForm.remove();
       replaceButton(saveButton, 'add-player', '&plus; <br/> add player');

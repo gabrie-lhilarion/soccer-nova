@@ -19,7 +19,7 @@ class Dom {
 
     const playersContainer = () => document.getElementById('empty-list');
 
-    const form = () => document.querySelector('form');
+    const getAddPlayerForm = () => document.querySelector('form');
 
     const  removeEmptyListInfoText = () => {
       if (document.querySelector('.empty-list-info-text')) {
@@ -28,7 +28,7 @@ class Dom {
     }
 
     const resetForm = () => {
-      const formInputs = [...form().querySelectorAll('input')];
+      const formInputs = [...getAddPlayerForm().querySelectorAll('input')];
       formInputs.forEach((input) => { input.value = ''; });
       formInputs[0].previousElementSibling.src = '';
     };
@@ -40,7 +40,7 @@ class Dom {
       const newPlayerDiv = document.createElement('div');
       newPlayerDiv.classList.add('player');
 
-      const currentForm = form();
+      const currentForm = getAddPlayerForm();
       newPlayerDiv.innerHTML = currentForm.innerHTML;
 
       const playerDeleteButton = newPlayerDiv.querySelector('.close-form');
@@ -88,11 +88,26 @@ class Dom {
       currentForm.insertAdjacentElement('beforebegin', newPlayerDiv);
     };
 
-    const formIsValid = (form) => {
-      const filledForm = [...form().querySelectorAll('input')];
+    const formIsValid = () => {
+      const filledForm = [...getAddPlayerForm().querySelectorAll('input')];
 
       return filledForm.every((input) => input.value.trim().length > 1);
     };
+
+    const heighLightErrors = () => {
+      const filledForm = [...getAddPlayerForm().querySelectorAll('input')];
+
+      filledForm.forEach( input => {
+        input.value.trim() < 2 ? input.classList.add('border-red') : null;
+      });
+
+      setTimeout( () => removeHeightLight(), 2000)
+    }
+
+    const removeHeightLight = () => {
+      const heighLightedForm = [...getAddPlayerForm().querySelectorAll('input')];
+      heighLightedForm.forEach( input =>  input.classList.remove('border-red') )
+    }
 
     const replaceButton = (targetButton, identifier, text) => {
       targetButton.id = identifier;
@@ -114,10 +129,11 @@ class Dom {
       addPlayerForm,
       addPlayerButton,
       savePlayerButton,
-      form,
+      getAddPlayerForm,
       replaceButton,
       displayImagePreview,
       formIsValid,
+      heighLightErrors,
       addPlayerToList,
       resetForm,
       numberOfPlayers,
