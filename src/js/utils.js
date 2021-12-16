@@ -1,5 +1,5 @@
 class Utils {
-    static domFunctions( myForm, numberOfPlayers ) {
+    static domFunctions( myForm = null, numberOfPlayers = 0 ) {
     
     const moveImageToLeft = (element) => {
         const divWithPlayerImage = element.querySelector('.form-inner-1');
@@ -22,7 +22,11 @@ class Utils {
       const resetForm = (form) => {
         const formInputs = [...form().querySelectorAll('input')];
         formInputs.forEach((input) => { input.value = ''; });
-        formInputs[0].previousElementSibling.src = '';
+
+        if( formInputs[0].previousElementSibling !== null) {
+          formInputs[0].previousElementSibling.src = '';
+        }
+        
       };
   
       const addPlayerToList = (form) => {
@@ -39,14 +43,18 @@ class Utils {
   
         if (numberOfPlayers() % 2 === 0) {
   
-          playerDeleteButton.className = 'delete-right';
+           if(playerDeleteButton) {
+             playerDeleteButton.className = 'delete-right';
+           }
   
           moveImageToLeft(newPlayerDiv)
   
         } else {
-  
+          
+          if(playerDeleteButton) {
           playerDeleteButton.className = 'delete-left';
-  
+          }
+
           moveImageToRight(newPlayerDiv)
   
         }

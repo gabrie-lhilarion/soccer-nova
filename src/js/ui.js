@@ -12,10 +12,11 @@ const {
 class UI {
 
   static display() {
+    
     appContainer
-      .innerHTML = `
+    .innerHTML = `
             ${initialContent}
-        `;
+    `;
   }
 
   static runApp() {
