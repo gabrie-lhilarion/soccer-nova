@@ -10,7 +10,7 @@ This is application makes heavy use of Dom manipulation.
 - JEST
 
 ## Desktop Preview
-![screenshot](./shots/start-page.png)
+![screenshot](./shots/startp-page.png)
 ![screenshot](./shots/soccer-nova-add-1.png)
 ![screenshot](./shots/soccer-nova-add-2.png)
 ![screenshot](./shots/soccer-nova-add-3.png)
