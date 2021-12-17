@@ -6,6 +6,7 @@ body {
 
 .vertical-centered {
   padding-top: 40vh;
+<<<<<<< HEAD
 }
 
 .with-40 {
@@ -40,6 +41,8 @@ body {
   width: 95%;
   padding: 10px 2px;
   margin: 4px auto;
+=======
+>>>>>>> 13c8659740e14c5fa5f5ab450d5e82bd4b40f5a3
 }
 
 #soccer-nova {
@@ -79,7 +82,11 @@ body {
   justify-content: space-between;
 }
 
+<<<<<<< HEAD
 #empty-list .empty-list-info-text {
+=======
+#empty-list .info-text {
+>>>>>>> 13c8659740e14c5fa5f5ab450d5e82bd4b40f5a3
   text-align: center;
   font-family:
     'Lucida Sans',
@@ -89,6 +96,7 @@ body {
     Geneva,
     Verdana,
     sans-serif;
+<<<<<<< HEAD
 }
 
 #add-player {
@@ -228,3 +236,11 @@ form {
   border: solid 1px #ccc;
 }
 
+=======
+}
+
+#add-player {
+  margin: 30px;
+  cursor: pointer;
+}
+>>>>>>> 13c8659740e14c5fa5f5ab450d5e82bd4b40f5a3

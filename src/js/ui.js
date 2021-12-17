@@ -27,7 +27,7 @@ class UI {
       (clickEvent) => addDeletePlayer(clickEvent),
     );
   }
-
+  
 }
 
 export default UI;
