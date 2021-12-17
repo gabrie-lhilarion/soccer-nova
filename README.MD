@@ -12,10 +12,10 @@ This is application makes heavy use of Dom manipulation.
 ## Desktop Preview
 ![screenshot](./shots/startp-page.png)
 ![screenshot](./shots/soccer-nova-form.png)
+![screenshot](./shots/soccer-nova-filled-form.png)
 ![screenshot](./shots/soccer-nova-add-1.png)
 ![screenshot](./shots/soccer-nova-add-2.png)
 ![screenshot](./shots/soccer-nova-add-3.png)
-![screenshot](./shots/soccer-nova-filled-form.png)
 
 
 ## Getting Started
