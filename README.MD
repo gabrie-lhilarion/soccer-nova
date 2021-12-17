@@ -30,7 +30,7 @@ Follow this link to my GitHub repository. Copy the link from the code button
  
 After you have copied the link, enter the command below in your terminal
  
-git clone https://github.com/gabrie-lhilarion/minimalist.git
+git clone https://github.com/gabrie-lhilarion/soccer-nova.git
 
 ## Remember to paste the link after the git clone command 
 
