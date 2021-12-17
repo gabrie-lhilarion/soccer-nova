@@ -37,20 +37,15 @@ git clone https://github.com/gabrie-lhilarion/soccer-nova.git
 ## Author
 
 👤 **Gabriel Hilarion**
-
 - GitHub: [@githubhandle](https://github.com/gabrie-lhilarion)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/gabrielhilarion/)
 
-## Online View
-
-
-[Here](https://github.com/gabrie-lhilarion/soccer-nova/dist) is a link to the online view of my website
-
-## Show your support
-
 ## TEST
-
 - To test the App, run 
 ``` npm run test ```
 
+## Online View
+[Here](https://github.com/gabrie-lhilarion/soccer-nova/dist) is a link to the online view of my website
+
+## Show your support
 Give a ⭐️ if you like this project!
