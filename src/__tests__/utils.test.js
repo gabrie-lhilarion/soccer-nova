@@ -64,8 +64,8 @@ describe('Utility fuctions for the app', () => {
 
         document.body.appendChild(soccerNova);
         let numOflayers = document.querySelectorAll('.player').length;
+        
         // remember numOflayers is equivalent to numberOfPlayers()
-       
         expect(numOflayers).toBe(0);
         expect(numberOfPlayers()).toBe(0);
 
