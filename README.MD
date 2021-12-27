@@ -45,7 +45,7 @@ git clone https://github.com/gabrie-lhilarion/soccer-nova.git
 ``` npm run test ```
 
 ## Online View
-[Here](https://github.com/gabrie-lhilarion/soccer-nova/dist) is a link to the online view of my website
+[Here](https://gabrie-lhilarion.github.io/soccer-nova/dist) is a link to the online view of my website
 
 ## Show your support
 Give a ⭐️ if you like this project!
